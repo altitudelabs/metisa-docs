@@ -1,4 +1,14 @@
 {
-    "plugins": ["theme-faq"],
-    "root": "./docs"
+    "plugins": [
+        "scripts",
+        "-sharing"
+    ],
+    "theme": "./theme",
+    "root": "./docs",
+    "title": "Metisa Documentation",
+    "pluginsConfig": {
+        "scripts": {
+            "files": ["js/scripts.js"]
+        }
+    }
 }

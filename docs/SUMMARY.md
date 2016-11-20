@@ -1,5 +1,21 @@
 # Summary
 
-* [Introduction](README.md)
-* [Whoa](HELLO.md)
+* [Getting started](README.md)
+* [Insights](insights.md)
+  * [Customer lifetime value](insights.md#customer-lifetime-value)
+  * [Churn](insights.md#churn)
+  * [Personas](insights.md#customer-personas)
+  * [Recommendations](insights.md#product-recommendations)
+* [Filtering](filtering.md)
+  * [Overview](filtering.md#overview)
+  * [Basics](filtering.md#basic-filters)
+  * [Expressions](filtering.md#expressions)
+  * [Fields](filtering.md#fields)
+  * [Operators](filtering.md#operators)
+  * [Values](filtering.md#values)
+* [Email](email.md)
+* [Integrations](integrations.md)
+  * [Shopify](integrations/shopify.md)
+  * [Magento](integrations/magento.md)
+  * [BigCommerce](integrations/bigcommerce.md)
 
