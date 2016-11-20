@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "docs:build": "gitbook install && rm -rf _book && gitbook build",
+        "docs:publish": "npm run docs:build && cd _book && git init && git commit --allow-empty -m 'Update docs' && git checkout -b gh-pages && git add . && git commit -am 'Update docs' && git push https://github.com/altitudelabs/metisa-docs.git gh-pages --force"
+    }
+}
