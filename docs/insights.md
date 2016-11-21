@@ -1,8 +1,25 @@
 # Insights
 
+### Overview
+
+Metisa's insights are modelled after decisions marketers instinctively make each day about a customer:
+
+* How valuable is he/she? (Customer Lifetime Value)
+* How loyal is he/she? (Churn)
+* Are there many others like him/her? (Personas)
+* What products does he/she like? (Recommendations)
+
+These insights tell you what and when to send to each customer to maximize the likelihood of sales conversion. Our algorithms are predictive. They perform significantly better than traditional methods.
+
 ### Customer lifetime value
 
-Customer lifetime value (CLV) is the present value of future purchases for a customer. We compute CLV by taking the sum of expected monthly spending of a customer for the next 24 months discounted to present value.
+Customer lifetime value (CLV) is the financial value of a customer in your store. It is the sum of future sales expected from a customer discounted to the present value. Our predictive model is based on your sales history and takes to account the nature of your industry as well as how your customers shop.
+
+Traditionally, marketers use total sales from a customer as a proxy for customer lifetime value. Our predictive model is more accurate as it is forward looking and is based on your sales history. For instance, a customer who is new but a frequent spender could be more valuable than a inactive customer who used to buy a lot.
+
+In customer acquisition, CLV is compared to the cost of acquiring a customer (CAC). For instance, to have a positive return on customer acquisition, a brand might want to have CAC < 0.25-0.5 &times; CLV. This comparison is done by channel (e.g. Facebook, Google Adwords etc.) to figure out which are the most cost-effective channels to acquire customers.
+
+In customer retention, the goal is to maximize CLV of your existing customers. This is done by focusing on key lifecycle transitions, such as converting a one-time to an active customer, or winning back an at-risk customer. The more active a customer is, the higher his/her CLV.
 
 ### Churn
 
@@ -20,9 +37,9 @@ We take a data-centric, bottom-up approach to figuring out who customer personas
 
 To learn more, read our [blog post](http://askmetisa.com/blog/bottom-up-customer-personas/).
 
-### Product recommendations
+### Recommendations
 
-Metisa generates product recommendations for each customer based on what similar customers bought. Product recommendations allow you to create content that is tailored to every customer, resulting in 2-5x increases in email click rates.
+Recommendations are the core of creating a personalized experience. Metisa generates recommendations for each customer based on what similar customers bought. Product recommendations allow you to create content that is tailored to every customer, resulting in 2-5x increases in email click rates.
 
 To learn more, read our [blog post](http://askmetisa.com/blog/personalised-product-recommendations/).
 
