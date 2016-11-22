@@ -59,11 +59,15 @@ If you decide to venture into the advanced realm, read more below.
 
 Expressions are the basic building block of a filter. They take the following form:
 
-```{{field}} {{operator}} {{value}}```
+```
+{{field}} {{operator}} {{value}}
+```
 
 For instance, in the expression below, last_purchase is the field, < is the operator and '2015-12-31' is the operator. This filters customers whose last purchase date is before 31 December 2015.
 
-```last_purchase < '2015-12-31'```
+```
+last_purchase < '2015-12-31'
+```
 
 Expressions can be chained using 'and' and 'or' operators and can be excluded using the 'not' operator.
 

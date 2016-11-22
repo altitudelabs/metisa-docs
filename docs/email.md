@@ -2,9 +2,17 @@
 
 ### Overview
 
-Metisa allows you to harness the power of predictive insights in email marketing.
+Emails are an important communication channel in customer relationship management (CRM). The goal of CRM is to maximize total [customer lifetime value (CLV)](insights.md#customer-lifetime-value) of your customers. The best way to do this is lifecycle marketing, which is to have different strategies for a customer depending on what stage of the lifecycle he is at. For instance, if a customer is a one-time buyer, the goal is to convert him into an active buyer. If a customer is at-risk, the focus is to win him back. By doing this effectively, a marketer is maximizes the total CLV of the store's customers.
 
-Metisa integrates with your favorite email marketing tools. You can test marketing ideas and automate the ones that work to maximise sales. You can create customer segments to target customers based on Metisa's Predictive Insights. You can also send personalised recommendations to each customer.
+![](/images/email/lifecycle.png)
+
+### Integrations
+
+Sending emails with Metisa takes only a minute to setup.
+
+We recommend sending emails through Amazon SES. For our Free, Growth and Business plans, sending emails come at no additional cost to you with Amazon SES.
+
+You can also use Mailchimp as an email provider, but there are limitations because Mailchimp restricts the number of merge fields we can populate.
 
 ### Getting started
 
@@ -14,36 +22,89 @@ Metisa integrates with your favorite email marketing tools. You can test marketi
 
 ### Strategies
 
-Strategies are goals you want to achieve on a customer segment, such as activate one-time customers or winback at-risk customers. A strategy contains one or more marketing ideas.
+Strategies are goals you want to achieve on a customer segment, such as:
 
-By default, campaigns for each strategy are manually created. After you automate an idea, Metisa schedules campaigns automatically.
+* Activating new customers
+* Activating one-time customers
+* Winback at-risk customers
+* Winback lost customers
+* Product launch
+* Events and promotions
 
-Campaigns are scheduled a week in advance. In other words, if you start automating an idea on Monday, the first campaign will be sent next week. This gives you time to write the copy for ideas that require action each time.
+You can test one or more ideas for a strategy. For instance, an idea for a strategy to winback at-risk customers could be a 10% discount. Another idea could be to give customers free shipping on their next purchase when they make their first purchase. When a campaign is sent, Metisa allocates one idea to each customer to maximize sales.
 
-### Ideas
+By default, campaigns for each strategy are manually created. You can also ask Metisa to schedule campaigns automatically.
 
-Ideas are types of marketing campaigns for a strategy. For instance, an idea for a strategy to winback at-risk customers could be a 10% discount. Another idea could be to give customers free shipping on their next purchase when they make their first purchase.
+### Templates
 
-### FAQ
+You use HTML and CSS to tweak the layout, content and style of your email templates and merge fields to personalize the experience for each customers. You can use the following merge fields in your templates:
 
-#### What does the action required setting for a strategy mean?
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col-md-8">Merge field</th>
+            <th class="col-md-4">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>FNAME</td>
+            <td>First name</td>
+        </tr>
+        <tr>
+            <td>LNAME</td>
+            <td>Last name</td>
+        </tr>
+        <tr>
+            <td>LANGUAGE</td>
+            <td>Language preference (if any)</td>
+        </tr>
+        <tr>
+            <td>POINTS</td>
+            <td>Loyalty point balance (if any)</td>
+        </tr>
+        <tr>
+            <td>PRO1_ID, PRO2_ID, ... PRO16_ID</td>
+            <td>Product Id for product recommendation</td>
+        </tr>
+        <tr>
+            <td>PRO1_NAME, PRO2_NAME, ... PRO16_NAME</td>
+            <td>Product name for product recommendation</td>
+        </tr>
+        <tr>
+            <td>PRO1_DESC, PRO2_DESC, ... PRO16_DESC</td>
+            <td>Product description for product recommendation</td>
+        </tr>
+        <tr>
+            <td>PRO1_URL, PRO2_URL, ... PRO16_URL</td>
+            <td>Link to product page for product recommendation</td>
+        </tr>
+        <tr>
+            <td>PRO1_IMG, PRO2_IMG, ... PRO16_IMG</td>
+            <td>Link to product image for product recommendation</td>
+        </tr>
+    </tbody>
+</table>
 
-Some strategies cannot be completely automated and need the attention of marketers each time they are sent (e.g. monthly newsletter). Such strategies are marked as action required and require you to amend the subject and content before they are scheduled.
+#### Recommendations
 
-#### How is this better than just using my email provider?
+Personalize content for each customer in your templates by using product recommendation merge fields. You have access to the top 16 products that a customer is likely to buy.
 
-Using predictive insights to create customer segments or personalised content statistically increases the likelihood of engagement and conversion. In some instances, predictive insights could give you 2X or more returns. In other words, you get more ROI for the same effort.
+#### Multiple languages
 
-Metisa reacts to changes in the market and how your competitors behave. When you have multiple ideas targeting a customer segment, Metisa automatically sends the one with the highest expected ROI. If an idea works in current market conditions, Metisa will send more of it. Likewise, if an idea is losing effectiveness, Metisa will send less of it.
+If your customers have language preferences, you can create template variants for every language using the `{{LANGUAGE}}` merge field. You can also use this merge field in the Subject of your campaign.
 
-#### If I have many ideas for a strategy, will I end up sending multiple emails to customers in the same segment?
+```
+{% if LANGUAGE == 'french' %}
+// French content here
+{% elif LANGUAGE == 'chinese' %}
+// Chinese content here
+{% else %}
+// Default content here
+{% endif %}
 
-No. Metisa will send the idea with highest expected return to each customer for a given strategy.
+```
 
-#### Which email providers do you integrate with?
+#### Loyalty points
 
-We integrate with Amazon SES and Mailchimp. However, we strongly recommend using Amazon SES to because it is less expensive and gives you more sending options.
-
-#### When do you send emails?
-
-We send emails at the time of day and day of week where your customers are most likely to engage.
+If your store has a loyalty point system, you can display loyalty point balances using `{{POINTS}}` merge field.

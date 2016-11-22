@@ -35,11 +35,11 @@ body {
 
 .book.font-family-1 {
     font-family: 'Proxima Nova', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .book.font-size-1 .book-body .page-inner section {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .brand img {
@@ -61,7 +61,7 @@ body {
 
 .book-summary ul.summary li {
     font-weight: normal;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .book-summary ul.summary > li.chapter > ul.articles {
@@ -80,4 +80,8 @@ body {
 
 .font-settings {
   display: none;
+}
+
+.page-inner img {
+  margin-top: 20px;
 }
