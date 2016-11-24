@@ -43,6 +43,8 @@ Recommendations are the core of creating a personalized experience. Metisa gener
 
 To learn more, read our [blog post](http://askmetisa.com/blog/personalised-product-recommendations/).
 
-### Why is an insight not available?
+### FAQ
+
+#### Why is an insight not available?
 
 Predictive insights are forecasts made based on historical data. An insight is not available when we need more data to produce a reliable result. This could occur with [customer lifetime value](#customer-lifetime-value), [churn](#churn), [customer personas](#customer-personas) and [recommendations](#recommendations). In our experience, Metisa produces results for stores with over 5,000 sales items transacted.

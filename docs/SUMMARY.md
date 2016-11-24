@@ -11,6 +11,7 @@
   * [Churn](insights.md#churn)
   * [Personas](insights.md#customer-personas)
   * [Recommendations](insights.md#recommendations)
+  * [FAQ](insights.md#faq)
 * [Filtering](filtering.md)
   * [Overview](filtering.md#overview)
   * [Basics](filtering.md#basic-filters)
