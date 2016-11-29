@@ -14,41 +14,45 @@ Widgets are personalized content blocks you can place on your e-commerce web or 
 
 Each widget has a HTML template which you can use to customise its look and feel. You can use a 3-column, 4-column or even a carousel layout (with the help of Javascript). You can insert any of the top 16 products a customer is likely to buy in your templates using merge fields.
 
-The products are stored in the products merge field. You can access the products by their indices from `products.0` through `products.15`. Note that indices start from 0. For instance, this merge field inserts the name of the third product:
+HTML templates support [Django template tags and filters](https://docs.djangoproject.com/en/1.8/ref/templates/builtins/). You can even use built-in filters like [humanize](https://docs.djangoproject.com/en/1.8/ref/contrib/humanize/) to format data points.
 
-```
-{{product.2.name}}
-```
-
-Each product has the following fields:
+The products are prefixed from `PRO1_` through `PRO16_` and the following merge fields are available:
 
 <table class="table">
     <thead>
         <tr>
-            <th class="col-md-8">Field</th>
             <th class="col-md-4">Description</th>
+            <th class="col-md-8">Merge Fields</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>name</td>
-            <td>Name of the product</td>
+            <td>Product name</td>
+            <td>PRO1_NAME, PRO2_NAME ... PRO16_NAME</td>
         </tr>
         <tr>
-            <td>description</td>
-            <td>Description of the product</td>
+            <td>Product description</td>
+            <td>PRO1_DESC, PRO2_DESC ... PRO16_DESC</td>
         </tr>
         <tr>
-            <td>price</td>
-            <td>List price of the product</td>
+            <td>Product URL</td>
+            <td>PRO1_URL, PRO2_URL ... PRO16_URL</td>
         </tr>
         <tr>
-            <td>discount</td>
-            <td>Amount of discount on the product</td>
+            <td>Product image URL</td>
+            <td>PRO1_IMG, PRO2_IMG ... PRO16_IMG</td>
         </tr>
         <tr>
-            <td>price_discounted</td>
-            <td>Discounted price of the product</td>
+            <td>Product list price</td>
+            <td>PRO1_PRICE, PRO2_PRICE ... PRO16_PRICE</td>
+        </tr>
+        <tr>
+            <td>Product discounted price</td>
+            <td>PRO1_PRICE_D, PRO2_PRICE_D ... PRO16_PRICE_D</td>
+        </tr>
+        <tr>
+            <td>Product discount label (e.g. 30% off, $20 off)</td>
+            <td>PRO1_DISCOUNT, PRO2_DISCOUNT ... PRO16_DISCOUNT</td>
         </tr>
     </tbody>
 </table>
