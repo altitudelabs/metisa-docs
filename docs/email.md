@@ -6,7 +6,7 @@ Emails are an important communication channel in customer relationship managemen
 
 ![](/images/email/lifecycle.png)
 
-### Integrations
+### Email integration
 
 Sending emails with Metisa takes only a minute to setup.
 
@@ -16,11 +16,11 @@ You can also use Mailchimp as an email provider, but there are limitations becau
 
 ### Getting started
 
-1.  Setup strategies: Setup marketing strategies and ideas for different customer segments.
+1.  Set up strategies: Set up marketing strategies and ideas for different customer segments.
 2.  Experiment: Create one-off campaigns to test how each idea contributes to sales.
 3.  Automate: Automate strategies that work well and we will schedule your campaigns to maximise sales.
 
-### Strategies
+### Creating a strategy
 
 Strategies are goals you want to achieve on a customer segment, such as:
 
@@ -35,7 +35,11 @@ You can test one or more ideas for a strategy. For instance, an idea for a strat
 
 By default, campaigns for each strategy are manually created. You can also ask Metisa to schedule campaigns automatically.
 
-### Templates
+#### Video Tutorial
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lVsajEBgCKk" frameborder="0" allowfullscreen></iframe>
+
+#### Email templates
 
 You use HTML and CSS to tweak the layout, content and style of your email templates and merge fields to personalize the experience for each customers. You can use the following merge fields in your templates:
 
@@ -86,11 +90,11 @@ You use HTML and CSS to tweak the layout, content and style of your email templa
     </tbody>
 </table>
 
-#### Recommendations
+##### Recommendations
 
 Personalize content for each customer in your templates by using product recommendation merge fields. You have access to the top 16 products that a customer is likely to buy.
 
-#### Multiple languages
+##### Multiple languages
 
 If your customers have language preferences, you can create template variants for every language using the `{{LANGUAGE}}` merge field. You can also use this merge field in the Subject of your campaign.
 
@@ -105,6 +109,12 @@ If your customers have language preferences, you can create template variants fo
 
 ```
 
-#### Loyalty points
+##### Loyalty points
 
 If your store has a loyalty point system, you can display loyalty point balances using `{{POINTS}}` merge field.
+
+### Sending a one-time campaign
+
+####Video Tutorial
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FZKoouRU-qQ" frameborder="0" allowfullscreen></iframe>

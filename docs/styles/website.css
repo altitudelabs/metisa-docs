@@ -78,6 +78,36 @@ body {
     color: #38CEA3;
 }
 
+.markdown-section .topic {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+.markdown-section .topic h4 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.markdown-section .topic a {
+    display: block;
+    padding: 15px 10px 15px 0px;
+    color: black;
+}
+
+.markdown-section .topic a:hover,
+.markdown-section .topic a:focus,
+.markdown-section .topic a:visited {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .markdown-section .topic {
+        width: 100%;
+        float: none;
+    }
+}
+
 .font-settings {
   display: none;
 }
