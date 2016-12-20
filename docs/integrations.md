@@ -14,7 +14,7 @@ If you use another store engine or have a custom store, please contact us at [su
 
 ### Email
 
-You can use insights from Metisa to send emails using Mailchimp or Amazon SES. If you use other email providers, you can export customer segments.
+You can use insights from Metisa to send emails using Mailchimp or Amazon SES. If you use other email providers, you can export customer segments. Find out more [here](email.md#email-integration).
 
 ### SMS *(coming soon)*
 

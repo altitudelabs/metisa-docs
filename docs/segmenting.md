@@ -1,4 +1,4 @@
-# Filtering
+# Segmenting
 
 ### Overview
 
@@ -47,15 +47,17 @@ Sending relevant messages to customer segments is key to increasing engagement a
     </tbody>
 </table>
 
-### Basic Filters
+### Creating a basic filter
 
 Use our filtering interface (Insight - Customers - Create Filter) to get a sense of how to create customer segments. You can get a good idea of how filters work by playing around.
 
-If you decide to venture into the advanced realm, read more below.
-
 ![](/images/filtering/basic-filtering.png)
 
-### Expressions
+If you decide to venture into the advanced realm, read more below.
+
+### Creating an advanced filter
+
+#### Expressions
 
 Expressions are the basic building block of a filter. They take the following form:
 
@@ -73,7 +75,7 @@ Expressions can be chained using 'and' and 'or' operators and can be excluded us
 
 Read more about [fields](#fields), [operators](#operators) and [values](#values).
 
-### Fields
+#### Fields
 
 Fields form part of an expression. You can filter on the following fields. Note that fields are only available if data is collected in your store.
 
@@ -164,9 +166,9 @@ Fields form part of an expression. You can filter on the following fields. Note 
     </tbody>
 </table>
 
-### Operators
+#### Operators
 
-#### Overview
+##### Overview
 
 You can use the arithmetic operators such as equality (=), less than or equal to (<=), more than or equal to (>=), less than (<) and more than (>) to filter customers that meet certain criteria.
 
@@ -254,11 +256,11 @@ Here are a list of operators:
     </tbody>
 </table>
 
-#### Chaining Operators
+##### Chaining Operators
 
 Often, you need to run complex queries that are the result of many expressions. You can chain two or more expressions using logical operators 'and' and 'or'. They work like logical operators in mathematics and you can use parenthesis () to indicate which expressions should be evaluated first.
 
-#### Not Operator
+##### Not Operator
 
 You can use the 'not' operator to exclude the results of expressions. The 'not' operator appears in front of an expression, like so:
 
@@ -266,19 +268,19 @@ You can use the 'not' operator to exclude the results of expressions. The 'not' 
 
 The expression above filters customers who are not active.
 
-### Values
+#### Values
 
 Values can be strings, numbers or dates.
 
-#### Strings
+##### Strings
 
 Strings should be wrapped with apostrophes (') or double quotes (").
 
-#### Numbers
+##### Numbers
 
 Numbers are integers and decimals. They do not have to be wrapped in quotes.
 
-#### Dates
+##### Dates
 
 Metisa supports four types of dates. Dates should be provided in the format below and text should be wrapped with apostrophes (') or double quotes (").
 

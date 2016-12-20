@@ -10,7 +10,7 @@ Widgets are personalized content blocks you can place on your e-commerce web or 
 2. Install the Metisa plugin on all pages of your website
 3. Insert the widget code block where the widget should appear
 
-### Creating widgets
+### Creating a widget
 
 Each widget has a HTML template which you can use to customise its look and feel. You can use a 3-column, 4-column or even a carousel layout (with the help of Javascript). You can insert any of the top 16 products a customer is likely to buy in your templates using merge fields.
 
@@ -57,7 +57,7 @@ The products are prefixed from `PRO1_` through `PRO16_` and the following merge 
     </tbody>
 </table>
 
-### Installation
+### Installing a widget
 
 To install a widget, paste the code from `Widget - Installation` onto your website just before the &lt;&#47;body&gt; on all pages that you may want widgets to appear. Replace customer_id with your Customer ID so we know who you want to personalize the widget for.
 
