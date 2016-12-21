@@ -37,7 +37,7 @@ By default, campaigns for each strategy are manually created. You can also ask M
 
 #### Video Tutorial
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lVsajEBgCKk" frameborder="0" allowfullscreen></iframe>
+<div><iframe width="560" height="315" src="https://www.youtube.com/embed/lVsajEBgCKk" frameborder="0" allowfullscreen></iframe></div>
 
 #### Email templates
 
@@ -98,6 +98,7 @@ Personalize content for each customer in your templates by using product recomme
 
 If your customers have language preferences, you can create template variants for every language using the `{{LANGUAGE}}` merge field. You can also use this merge field in the Subject of your campaign.
 
+{% raw %}
 ```
 {% if LANGUAGE == 'french' %}
 // French content here
@@ -108,6 +109,7 @@ If your customers have language preferences, you can create template variants fo
 {% endif %}
 
 ```
+{% endraw %}
 
 ##### Loyalty points
 
@@ -117,4 +119,4 @@ If your store has a loyalty point system, you can display loyalty point balances
 
 ####Video Tutorial
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FZKoouRU-qQ" frameborder="0" allowfullscreen></iframe>
+<div><iframe width="560" height="315" src="https://www.youtube.com/embed/FZKoouRU-qQ" frameborder="0" allowfullscreen></iframe></div>

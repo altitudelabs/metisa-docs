@@ -61,9 +61,11 @@ If you decide to venture into the advanced realm, read more below.
 
 Expressions are the basic building block of a filter. They take the following form:
 
+{% raw %}
 ```
 {{field}} {{operator}} {{value}}
 ```
+{% endraw %}
 
 For instance, in the expression below, last_purchase is the field, < is the operator and '2015-12-31' is the operator. This filters customers whose last purchase date is before 31 December 2015.
 
