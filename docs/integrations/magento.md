@@ -32,6 +32,14 @@ Add your Magento store in Metisa by providing the following fields:
 
 ![](/images/magento/magento-5.png)
 
+### Install Magento extension
+
+Install our Magento extension that is designed to be used alongside your Metisa account. It installs a Javascript snippet to allow you to install on-site recommendation widgets on your Magento site from your Metisa account. It also installs a cookie that tracks customer behavior on your site so that recommendations can adapt as customers shop on your site.
+
+Download our Magento extension [here](https://s3-ap-southeast-1.amazonaws.com/metisa/magento/metisa-magento-1.0.tgz).
+
+Links to installation instructions for [Magento 1.x](https://www.cminds.com/down-to-the-basics-how-to-install-a-magento-extension) and [Magento 2.x](http://docs.magento.com/marketplace/user_guide/quick-tour/install-extension.html).
+
 ### Optimise API performance
 
 To improve the performance of the Magento API (and speed up the data sync), we highly recommend enabling caching for the API configuration to boost the performance of the Magento API’s Metisa calls.
