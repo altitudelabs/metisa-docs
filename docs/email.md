@@ -6,13 +6,13 @@ Emails are an important communication channel in customer relationship managemen
 
 ![](/images/email/lifecycle.png)
 
-### Email integration
+### Sending emails
 
-Sending emails with Metisa takes only a minute to setup.
+Sending emails with Metisa takes only a minute to setup and come at no additional cost to you.
 
-We recommend sending emails through Amazon SES. For our Free, Growth and Business plans, sending emails come at no additional cost to you with Amazon SES.
+If you use other email providers, you can export customer segments as a CSV file within Metisa's **Segments - Customers** view. Please refer to the screenshot below.
 
-You can also use Mailchimp as an email provider, but there are limitations because Mailchimp restricts the number of merge fields we can populate.
+![](/images/email/export-customers.png)
 
 ### Getting started
 
