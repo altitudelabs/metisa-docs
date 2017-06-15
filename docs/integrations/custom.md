@@ -212,7 +212,7 @@ For instance, if you are uploading data for 1 January 2017, your files should be
         <tr>
             <td>image_url</td>
             <td>string</td>
-            <td>http://images.nike.com/is/image/DotCom/PDP_COPY/843765_001/lunarepic-low-flyknit-womens-running-shoe.jpg</td>
+            <td>http://images.nike.com/shoe.jpg</td>
             <td>Optional</td>
             <td>Absolute URL to the product image</td>
         </tr>
