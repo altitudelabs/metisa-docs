@@ -6,10 +6,20 @@ Published with [Gitbook](https://github.com/GitbookIO/gitbook).
 
 1. Clone repository
 
-2. Run locally
+2. Download Gitbooks CLI (skip if done)
+
+You need to download Gitbooks CLI first if you haven't. Install globally for convenience:
+
+```
+npm install -g gitbook-cli
+```
+
+3. Run locally
 
 ```
 npm run docs:build
+
+gitbook serve
 ```
 
 # Deploy
@@ -21,6 +31,3 @@ npm run docs:publish
 ```
 
 2. View at [https://altitudelabs.github.io/metisa-docs/](https://altitudelabs.github.io/metisa-docs/)
-
-
-

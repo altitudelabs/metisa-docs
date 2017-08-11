@@ -34,3 +34,4 @@
   * [Getting started](widgets.md#getting-started)
   * [Creating a widget](widgets.md#creating-a-widget)
   * [Installing a widget](widgets.md#installing-a-widget)
+* [Frequently Asked Questions](faq.md)
