@@ -1,4 +1,4 @@
-# Integrations
+# Install integrations
 
 Metisa analyzes your customers' purchases and behavior and lets you act on insights by email, SMS and web widgets.
 

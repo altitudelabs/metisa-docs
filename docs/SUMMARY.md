@@ -2,7 +2,7 @@
 
 * [Home](README.md)
 * [Getting started](getting_started.md)
-* [Integrations](integrations.md)
+* [Install integrations](integrations.md)
   * [Shopify](integrations/shopify.md)
   * [Magento](integrations/magento.md)
   * [BigCommerce](integrations/bigcommerce.md)
