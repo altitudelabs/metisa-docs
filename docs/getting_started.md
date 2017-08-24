@@ -5,7 +5,7 @@ description: Getting started with Metisa.
 
 # Getting started
 
-1. **Integrate your store.** To analyze your customers, we need access to your store data through one of our [store integrations](integrations.md). Your data is refreshed once daily.
+1. **Install your integration.** To analyze your customers, we need access to your store data through one of our [store integrations](integrations.md). Your data is refreshed once daily.
 
 2. **Learn about your customers.** Check out your store [insights](insights.md) to find out what your priorities should be for customer acquisition and retention.
 
