@@ -7,8 +7,16 @@ description: Getting started with Metisa.
 
 1. **Install your integration.** To analyze your customers, we need access to your store data through one of our [store integrations](integrations.md). Your data is refreshed once daily.
 
-2. **Learn about your customers.** Check out your store [insights](insights.md) to find out what your priorities should be for customer acquisition and retention.
+# Supercharging sales conversions
 
-3. **Act.** Create [customer segments](segmenting.md), [email campaigns](email.md) and [web widgets](widgets.md) with personalized content for your customers to increase the likelihood of sales conversions.
+So you've installed Metisa. What do you do next?
 
-4. **Optimise.** Once you find strategies that work well, let Metisa automate and optimise them for you. Spend your time on strategies rather than execution.
+Let's break it down. What stands between shoppers and a purchase. First, you need to give shoppers a reason to visit your store. Second, you need to get shoppers to convert when they visit on your store.
+
+[diagram]
+
+The first thing to do should be to increase conversion rates. This will increase the results in all your customer acquisition activity. You can do so by installing Metisa's recommendation widgets. We recommend setting the following up:
+
+* Things you may like
+* Trending products
+* New product

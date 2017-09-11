@@ -1,63 +1,45 @@
 # Custom Integration
 
-This document sets out how you can integrate your custom store with Metisa. It is intended for readers with technical knowledge.
+This document sets out how you can integrate your custom store data with Metisa to gain access to powerful customer analytics, recommendations and personalized emails.
 
-Metisa analyzes customer purchase history data that comes from your Customer, Product and Order Item tables in your CRM or database. From this data, you will generate 3 files: Customer.csv, Product.csv and Order.csv.
+## Contents
 
-For details on required fields/columns, please refer to the links below:
+* [Prerequisites](#prerequisites)
+* [Integration steps](#steps)
+* [Authentication](#auth)
+* [Customer API](#customer)
+* [Product API](#product)
+* [Order API](#order)
 
-* [Customer.csv](#customer)
-* [Product.csv](#product)
-* [Order.csv](#order)
+## <a id="prerequisites"></a> Prerequisites
 
-Integrating with Metisa requires setting up a recurring task or cronjob that will upload these 3 CSV files to us every day at the close of your business day.
+To integrate your custom store with Metisa:
 
-### Integration steps
+1. **You must have a Metisa account.** Custom integrations are available to all Metisa users, whether you're on a Free or Paid tier.
+2. **You must have basic technical knowhow.** Anyone comfortable with writing and maintaining a small script should be more than qualified.
 
-Once your data is in the right format, the integration process takes approximately 5 working days and involves the following steps:
+## <a id="steps"></a> Integration steps
 
-1. Generate Customer.csv, Product.csv and Order.csv
-2. Contact us at hello@askmetisa.com to create your account. We will set up your account and give you an account name, API key and API secret that you can use to [upload your files](#upload)
-3. Upload your first batch of CSV files that contain at least 1 year of historical data
-4. Upload subsequent batches of CSV files (only the new rows you want to update) on a daily basis
+Metisa analyzes customer purchase history data that comes from your Customer, Product and Order Item tables in your CRM or database. An integration involves sending these records to Metisa API.
 
-### <a id="upload"></a> Uploading files
+Metisa analyzes data once every 24 hours. After you create your customer, product and order records in Metisa, you can expect to see insights in 24 hours.
 
-CSV files can be uploaded with a PUT request.
+We recommend syncing at least 1 year of customer, product and order records to Metisa. To do this, you could write a daily script that creates and updates customer, product and order records to Metisa.
 
-File names must be prefixed with the current date in the format `%Y%m%d-Customer.csv`, `%Y%m%d-Product.csv` and `%Y%m%d-Order.csv`.
+## <a id="auth"></a> Authentication
 
-For instance, if you are uploading data for 1 January 2017, your files should be named 20170101-Customer.csv, 20170101-Product.csv and 20170101-Order.csv.
+You need an API token in order to access Metisa API. To get your API token, first create an account and add a custom store integration. Your API token will now appear under your user settings.
 
-Below is a sample bash script that you can use to upload a file.
+A request can be made by making an AJAX call to Metisa's API with your API token in the header. Here is an example using curl. Please be sure to replace your API token and store URL for this command to work:
 
 ```
-# Populate the variables here
-file=/path/to/file/to/20170101-Customer.csv
-account=<ACCOUNT_NAME>
-s3Key=<API_KEY>
-s3Secret=<API_SECRET>
-
-# DO NOT EDIT BELOW THIS LINE
-resource="/${account}/${file}"
-contentType="application/x-compressed-tar"
-dateValue=`date -R`
-stringToSign="PUT\n\n${contentType}\n${dateValue}\n${resource}"
-signature=`echo -en ${stringToSign} | openssl sha1 -hmac ${s3Secret} -binary | base64`
-
-curl -X PUT -T "${file}" \
-  -H "Host: ${account}.s3.amazonaws.com" \
-  -H "Date: ${dateValue}" \
-  -H "Content-Type: ${contentType}" \
-  -H "Authorization: AWS ${s3Key}:${signature}" \
-  https://${account}.s3.amazonaws.com/${file}
+curl -X GET https://askmetisa.com/{{ store_url }}/api/v1/customer \
+     -H "Authorization: Token {{ api_token }}"
 ```
 
-### <a id="customer"></a> Customer.csv
+## <a id="customer"></a> Customer API
 
-File names must be prefixed with the current date in the format `%Y%m%d-Customer.csv`.
-
-For instance, if you are uploading data for 1 January 2017, your files should be named 20170101-Customer.csv.
+### Fields
 
 <table class="table table-bordered table-hover table-condensed">
     <thead>
@@ -164,11 +146,40 @@ For instance, if you are uploading data for 1 January 2017, your files should be
     </tbody>
 </table>
 
-### <a id="product"></a> Product.csv
+### Get many customer records
 
-File names must be prefixed with the current date in the format `%Y%m%d-Product.csv`.
+```
+GET https://askmetisa.com/{{ store_url }}/api/v1/customer
+```
 
-For instance, if you are uploading data for 1 January 2017, your files should be named 20170101-Product.csv.
+### Get single customer record
+
+```
+GET https://askmetisa.com/{{ store_url }}/api/v1/customer/{{ id }}
+```
+
+### Create customer record
+
+```
+POST https://askmetisa.com/{{ store_url }}/api/v1/customer
+```
+
+### Update customer record
+
+```
+PUT https://askmetisa.com/{{ store_url }}/api/v1/customer/{{ id }}
+PATCH https://askmetisa.com/{{ store_url }}/api/v1/customer/{{ id }}
+```
+
+### Delete customer record
+
+```
+DELETE https://askmetisa.com/{{ store_url }}/api/v1/customer/{{ id }}
+```
+
+## <a id="product"></a> Product API
+
+### Fields
 
 <table class="table table-bordered table-hover table-condensed">
     <thead>
@@ -282,11 +293,40 @@ For instance, if you are uploading data for 1 January 2017, your files should be
     </tbody>
 </table>
 
-### <a id="order"></a> Order.csv
+### Get many product records
 
-File names must be prefixed with the current date in the format `%Y%m%d-Order.csv`.
+```
+GET https://askmetisa.com/{{ store_url }}/api/v1/product
+```
 
-For instance, if you are uploading data for 1 January 2017, your files should be named 20170101-Order.csv.
+### Get single product record
+
+```
+GET https://askmetisa.com/{{ store_url }}/api/v1/product/{{ id }}
+```
+
+### Create product record
+
+```
+POST https://askmetisa.com/{{ store_url }}/api/v1/product
+```
+
+### Update product record
+
+```
+PUT https://askmetisa.com/{{ store_url }}/api/v1/product/{{ id }}
+PATCH https://askmetisa.com/{{ store_url }}/api/v1/product/{{ id }}
+```
+
+### Delete product record
+
+```
+DELETE https://askmetisa.com/{{ store_url }}/api/v1/product/{{ id }}
+```
+
+## <a id="order"></a> Order API
+
+### Fields
 
 <table class="table table-bordered table-hover table-condensed">
     <thead>
@@ -427,3 +467,34 @@ For instance, if you are uploading data for 1 January 2017, your files should be
         </tr>
     </tbody>
 </table>
+
+### Get many order records
+
+```
+GET https://askmetisa.com/{{ store_url }}/api/v1/order
+```
+
+### Get single order record
+
+```
+GET https://askmetisa.com/{{ store_url }}/api/v1/order/{{ id }}
+```
+
+### Create order record
+
+```
+POST https://askmetisa.com/{{ store_url }}/api/v1/order
+```
+
+### Update order record
+
+```
+PUT https://askmetisa.com/{{ store_url }}/api/v1/order/{{ id }}
+PATCH https://askmetisa.com/{{ store_url }}/api/v1/order/{{ id }}
+```
+
+### Delete order record
+
+```
+DELETE https://askmetisa.com/{{ store_url }}/api/v1/order/{{ id }}
+```
