@@ -6,7 +6,7 @@
   * [Shopify](integrations/shopify.md)
   * [Magento](integrations/magento.md)
   * [BigCommerce](integrations/bigcommerce.md)
-  * [Custom](integrations/custom.md)
+  * [Custom E-Commerce](integrations/custom-ecommerce.md)
 * [Insights](insights.md)
   * [Overview](insights.md#overview)
   * [Customer lifetime value (CLV)](insights.md#customer-lifetime-value)

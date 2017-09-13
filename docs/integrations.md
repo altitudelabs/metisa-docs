@@ -7,4 +7,4 @@ It takes as little as a few minutes to integrate your store with Metisa. We have
 * [Shopify](integrations/shopify.md)
 * [Magento](integrations/magento.md)
 * [BigCommerce](integrations/bigcommerce.md)
-* [Custom/Other](integrations/custom.md)
+* [Custom E-Commerce](integrations/custom-ecommerce.md)

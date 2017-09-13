@@ -16,10 +16,10 @@ npm install -g gitbook-cli
 
 3. Run locally
 
-```
-npm run docs:build
+Changes will be live reloaded in dev mode.
 
-gitbook serve
+```
+npm run docs:watch
 ```
 
 # Deploy
