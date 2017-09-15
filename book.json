@@ -10,5 +10,8 @@
         "scripts": {
             "files": ["js/scripts.js"]
         }
+    },
+    "variables": {
+      "srcBaseUrl": "http://metisa-sdk.s3-ap-southeast-1.amazonaws.com"
     }
 }
