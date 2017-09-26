@@ -6,6 +6,7 @@
   * [Shopify](integrations/shopify.md)
   * [Magento](integrations/magento.md)
   * [BigCommerce](integrations/bigcommerce.md)
+  * [WooCommerce](integrations/woocommerce.md)
   * [Custom E-Commerce](integrations/custom-ecommerce.md)
 * [Insights](insights.md)
   * [Overview](insights.md#overview)
