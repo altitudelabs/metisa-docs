@@ -1,6 +1,6 @@
 # Custom Integration: E-Commerce
 
-Want to use Metisa even though your app is not built with any of the plugin-supported platforms? Use this article to set up your site to take full advantage of Metisa's recomendation engine for store.
+Want to use Metisa even though your app is not built with any of the plugin-supported platforms? Use this article to set up your site to take full advantage of Metisa's recommendation engine for store.
 
 This article is intended for an audience with some basic technical knowledge of HTML and JavaScript.
 
@@ -41,7 +41,7 @@ There are two main steps to installing the scripts that enable custom integratio
 
 ##### <a id="embed-site-wide-code"></a> Step 1: Embed site-wide code snippets
 
-Metisa requires v1.5+ jQuery, a library used frequenty by web developers. Please make sure jQuery is available.
+Metisa requires v1.5+ jQuery, a library used frequently by web developers. Please make sure jQuery is available.
 
 Add this to your base template file if your site uses an older version of jQuery or does not use it at all. (Note: adding this code block when your site already loads jQuery has a very slim chance of breaking your site due to differences between versions.)
 
@@ -74,53 +74,53 @@ With each page load, the product information is created or updated in the Metisa
 ```html
 <script type="text/javascript">
   // Initialize the correct store endpoint to send data to
-  mt('store', '{{ metisa_account_slug }}');
+  mt('slug', '{{ metisa_account_slug }}');
 
   // Send product data to Metisa
-  mt('product', {
-    id: '{{ product.id }}',
-    name: '{{ product.name }}',
-    brand: '{{ product.brand }}',
+  mt('item', {
+    id: '{{ product_id }}',
+    name: '{{ product_name }}',
+    maker: '{{ product_brand }}',
     variants: [
       {
-        id: '{{ variant.id }}',
-        name: '{{ variant.name }}',
-        availability: '{{ variant.availability }}',
-        image_url: '{{ variant.image_url }}',
-        url: '{{ variant.url }}',
-        price: '{{ variant.price }}',
-        price_discounted: '{{ variant.price_discounted }}'
+        id: '{{ variant_id }}',
+        name: '{{ variant_name }}',
+        availability: '{{ variant_availability }}',
+        image_url: '{{ variant_image_url }}',
+        url: '{{ variant_url }}',
+        price: '{{ variant_price }}',
+        price_discounted: '{{ variant_price_discounted }}'
       }
     ]
   });
 </script>
 ```
 
-> **DETAIL**: Note the difference between "product" and "variant". A product can have none or many variants. When a product has no variants, `variant` must still have one object representing the product itself. `variant.name` in such a case should be `null`.
+> **DETAIL**: Note the difference between "product" and "variant". A product can have none or many variants. When a product has no variants, `variants` must still have one object representing the product itself. `variant_name` in such a case should be `null`.
 
 Likewise for order data, you can embed a code snippet to your **order checkout template** so that whenever an order is finalized it will be sent to Metisa servers.
 
 ```html
 <script type="text/javascript">
   // Initialize the correct store endpoint to send data to
-  mt('store', '{{ metisa_account_slug }}');
+  mt('slug', '{{ metisa_account_slug }}');
 
   // Send order data to Metisa
-  mt('order', {
-    customer: {
-      id: '{{ customer.id }}',
-      first_name: '{{ customer.first_name }}',
-      last_name: '{{ customer.last_name }}',
-      email: '{{ customer.email }}'
+  mt('action', {
+    id: '{{ order_id }}',
+    user: {
+      id: '{{ customer_id }}',
+      first_name: '{{ customer_first_name }}',
+      last_name: '{{ customer_last_name }}',
+      email: '{{ customer_email }}'
     },
-    id: '{{ order.id }}',
-    currency: '{{ order.currency }}',
+    currency: '{{ order_currency }}',
     line_items: [
       {
-        variant_id: '{{ variant.id }}',
+        variant_id: '{{ variant_id }}',
         quantity: '{{ quantity }}',
-        price: '{{ variant.price }}',
-        product_id: '{{ product.id }}',
+        price: '{{ variant_price }}',
+        item_id: '{{ product_id }}',
         total_discount: '{{ total_discount }}'
       }
     ]
@@ -128,7 +128,7 @@ Likewise for order data, you can embed a code snippet to your **order checkout t
 </script>
 ```
 
-> **DETAIL**: If your store supports "guest" checkouts, you may not generate a `customer.id` and it can be left as `0` or `null`. Metisa will then switch strategy to use email to identify guest customers.
+> **DETAIL**: If your store supports "guest" checkouts, you may not generate a `customer_id` and it can be left as `0` or `null`. Metisa will then switch strategy to use email to identify guest customers.
 
 
 ### <a id="recommendations"></a> Embed your Metisa recommendations
