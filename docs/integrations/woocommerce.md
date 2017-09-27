@@ -30,86 +30,91 @@ You can easily install Metisa by embedding code snippets into the base template 
    ```
 
 2. Paste the following code block at the end of the template file. Every time a customer browses a specific product or places an order on your store, this will load the script for sending product or order data to the Metisa server. Replace `{% raw %}{{ metisa_account_slug }}{% endraw %}` with your **team slug**. This is the name in your URL when you log in to your [Metisa dashboard](https://askmetisa.com/myteamslug/insights/opportunities).
-    ```html
-    <?php if (is_product() || is_checkout()):?>
-      <!-- loads metisa script for sending product/order data -->
-      <script src="{{ book.srcBaseUrl }}/js/v0.0/browser.js"></script>
-    <?php endif;?>
-    <?php if(is_product()) { // product template
-  		// product adapter
-  		$product_data = array();
-  		$product = wc_get_product(get_the_ID());
-  		$product_data['id'] = (string)$product->get_id();
-  		$product_data['name'] = $product->get_name();
-  		$product_data['maker'] = (!is_null($product->get_attributes()['brand']))? $product->get_attributes()["brand"]->get_options()[0]: null;
-  		$product_data['variants'] = [];
-  		if (empty($product->get_children())) { // simple product
-  			$variant = array();
-  			$variant['id'] = $product_data['id'];
-  			$variant['name'] = null;
-  			$variant['availability'] = ($product->get_stock_status() == "outofstock")? 0: $product->get_stock_quantity();
-  			$variant['image_url'] = wp_get_attachment_image_src($product->get_image_id())[0];
-  			$variant['url'] = $product->get_permalink();
-  			$variant['price'] = (empty($product->get_regular_price()))? null: $product->get_regular_price();
-  			$variant['price_discounted'] = (empty($product->get_sale_price()))? null: $product->get_sale_price();
+  ```html
+  <?php if (is_product() || is_checkout()) {
+    $slug = '{% raw %}{{ metisa_account_slug }}{% endraw %}';
+  ?>
+    <!-- loads metisa script for sending product/order data -->
+  <script src="{{ book.srcBaseUrl }}/js/v0.0/browser.js"></script>
+  <?php }?>
+  <?php if(is_product()) { // product template
+		// product adapter
+		$product_data = array();
+		$product = wc_get_product();
+    if (!empty($product)) {
+      $product_data['id'] = (string) $product->get_id();
+      $product_data['name'] = $product->get_name();
+      $product_data['maker'] = (!is_null($product->get_attributes()['brand']))? $product->get_attributes()['brand']->get_options()[0]: null;
+      $product_data['variants'] = [];
+      if (empty($product->get_children())) { // simple product
+        $variant = array();
+        $variant['id'] = $product_data['id'];
+        $variant['name'] = null;
+        $variant['availability'] = ($product->get_stock_status() == 'outofstock')? 0: $product->get_stock_quantity();
+        $variant['image_url'] = wp_get_attachment_image_src($product->get_image_id())[0];
+        $variant['url'] = $product->get_permalink();
+        $variant['price'] = (empty($product->get_regular_price()))? null: $product->get_regular_price();
+        $variant['price_discounted'] = (empty($product->get_sale_price()))? null: $product->get_sale_price();
         $product_data['variants'][] = $variant;
       }
-  		else { //variable product
-  			foreach ($product->get_children() as $child_id) {
-      	  $product_variant = wc_get_product($child_id);
-  				$variant = array();
-  				$variant['id'] = $child_id;
-  				$variant['name'] = join(' / ',array_values($product_variant->get_variation_attributes()));
-  				$variant['availability'] = ($product_variant->get_stock_status() == "outofstock")? 0: $product_variant->get_stock_quantity();
-  				$variant['image_url'] = wp_get_attachment_image_src($product_variant->get_image_id())[0];
-  				$variant['url'] = $product_variant->get_permalink();
-  				$variant['price'] = (empty($product_variant->get_regular_price()))? null: $product_variant->get_regular_price();
-  				$variant['price_discounted'] = (empty($product_variant->get_sale_price()))? null: $product_variant->get_sale_price();
+      else { //variable product
+        foreach ($product->get_children() as $child_id) {
+          $product_variant = wc_get_product($child_id);
+          $variant = array();
+          $variant['id'] = $child_id;
+          $variant['name'] = join(' / ',array_values($product_variant->get_variation_attributes()));
+          $variant['availability'] = ($product_variant->get_stock_status() == 'outofstock')? 0: $product_variant->get_stock_quantity();
+          $variant['image_url'] = wp_get_attachment_image_src($product_variant->get_image_id())[0];
+          $variant['url'] = $product_variant->get_permalink();
+          $variant['price'] = (empty($product_variant->get_regular_price()))? null: $product_variant->get_regular_price();
+          $variant['price_discounted'] = (empty($product_variant->get_sale_price()))? null: $product_variant->get_sale_price();
           $product_data['variants'][] = $variant;
         }
       }
-    ?>
-  	<script>
-  		var itemData = <?php echo json_encode($product_data);?>;
-  		mt('slug', '{% raw %}{{ metisa_account_slug }}{% endraw %}');
-  		mt('item', itemData);
-  	</script>
-    <?php } elseif (is_checkout()){ // checkout template
-  		// order adapter
-  		$order_data = array();
-  		$order_id = (int) $wp->query_vars["order-received"];
-  		$order = wc_get_order($order_id);
+  ?>
+	<script>
+		var itemData = <?php echo json_encode($product_data);?>;
+		mt('slug', '<?php echo $slug; ?>');
+		mt('item', itemData);
+	</script>
+  <?php }} elseif (is_checkout()) { // checkout template
+		// order adapter
+		$order_data = array();
+		$order_id = (int) $wp->query_vars['order-received'];
+    if (!empty($order_id)) {
+      $order = wc_get_order($order_id);
   		$customer_id = $order->get_customer_id();
   		$customer = new WC_Customer($customer_id);
-			if ($customer_id == 0) { // guest
-				$order_data['customer']['first_name'] = $order->get_billing_first_name();
-				$order_data['customer']['last_name'] = $order->get_billing_last_name();
-				$order_data['customer']['email'] = $order->get_billing_email();
+      $order_data['user']['id'] = $customer_id;
+			if (empty($customer_id)) { // guest
+				$order_data['user']['first_name'] = $order->get_billing_first_name();
+				$order_data['user']['last_name'] = $order->get_billing_last_name();
+				$order_data['user']['email'] = $order->get_billing_email();
 			}
 			else { // existing customer
-				$order_data['customer']['first_name'] = $customer->get_billing_first_name();
-				$order_data['customer']['last_name'] = $customer->get_billing_last_name();
-				$order_data['customer']['email'] = $customer->get_billing_email();
+				$order_data['user']['first_name'] = $customer->get_first_name();
+				$order_data['user']['last_name'] = $customer->get_last_name();
+				$order_data['user']['email'] = $customer->get_email();
 			}
 			$order_data['id'] = (int) $order->get_order_number();
 			$order_data['currency'] = $order->get_currency();
 			$order_data['line_items'] = [];
 			foreach ($order->get_items() as $item) {
 				$line_item = array();
-				$line_item['variant_id'] = ($item['variation_id'] == 0)? null: $item['variation_id'];
+				$line_item['variant_id'] = ($item['variation_id'] == 0)? $item['product_id']: $item['variation_id'];
 				$line_item['quantity'] = $item['quantity'];
       	$line_item['price'] = (string)($item['subtotal'] / $item['quantity']);
-				$line_item['product_id'] = $item['product_id'];
+				$line_item['item_id'] = $item['product_id'];
 				$line_item['total_discount'] = (string)($item['subtotal'] - $item['total']);
       	$order_data['line_items'][] = $line_item;
    	 	}
-    ?>
-  	<script>
-  		var actionData = <?php echo json_encode($order_data);?>;
-  		mt('slug', '{% raw %}{{ metisa_account_slug }}{% endraw %}');
-  		mt('action', actionData);
-  	</script>
-    <?php }?>
+  ?>
+	<script>
+		var actionData = <?php echo json_encode($order_data);?>;
+		mt('slug', '<?php echo $slug; ?>');
+		mt('action', actionData);
+	</script>
+  <?php }}?>
     ```
 
 ### Embed your Metisa recommendations
