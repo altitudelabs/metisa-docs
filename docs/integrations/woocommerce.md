@@ -38,9 +38,9 @@ You can easily install Metisa by embedding code snippets into the base template 
   <script src="{{ book.srcBaseUrl }}/js/v0.0/browser.js"></script>
   <?php }?>
   <?php if(is_product()) { // product template
-		// product adapter
-		$product_data = array();
-		$product = wc_get_product();
+    // product adapter
+    $product_data = array();
+    $product = wc_get_product();
     if (!empty($product)) {
       $product_data['id'] = (string) $product->get_id();
       $product_data['name'] = $product->get_name();
@@ -72,50 +72,50 @@ You can easily install Metisa by embedding code snippets into the base template 
         }
       }
   ?>
-	<script>
-		var itemData = <?php echo json_encode($product_data);?>;
-		mt('slug', '<?php echo $slug; ?>');
-		mt('item', itemData);
-	</script>
+  <script>
+    var itemData = <?php echo json_encode($product_data);?>;
+    mt('slug', '<?php echo $slug; ?>');
+    mt('item', itemData);
+  </script>
   <?php }} elseif (is_checkout()) { // checkout template
-		// order adapter
-		$order_data = array();
-		$order_id = (int) $wp->query_vars['order-received'];
+    // order adapter
+    $order_data = array();
+    $order_id = (int) $wp->query_vars['order-received'];
     if (!empty($order_id)) {
       $order = wc_get_order($order_id);
-  		$customer_id = $order->get_customer_id();
-  		$customer = new WC_Customer($customer_id);
+      $customer_id = $order->get_customer_id();
+      $customer = new WC_Customer($customer_id);
       $order_data['user']['id'] = $customer_id;
-			if (empty($customer_id)) { // guest
-				$order_data['user']['first_name'] = $order->get_billing_first_name();
-				$order_data['user']['last_name'] = $order->get_billing_last_name();
-				$order_data['user']['email'] = $order->get_billing_email();
-			}
-			else { // existing customer
-				$order_data['user']['first_name'] = $customer->get_first_name();
-				$order_data['user']['last_name'] = $customer->get_last_name();
-				$order_data['user']['email'] = $customer->get_email();
-			}
-			$order_data['id'] = (int) $order->get_order_number();
-			$order_data['currency'] = $order->get_currency();
-			$order_data['line_items'] = [];
-			foreach ($order->get_items() as $item) {
-				$line_item = array();
-				$line_item['variant_id'] = ($item['variation_id'] == 0)? $item['product_id']: $item['variation_id'];
-				$line_item['quantity'] = $item['quantity'];
-      	$line_item['price'] = (string)($item['subtotal'] / $item['quantity']);
-				$line_item['item_id'] = $item['product_id'];
-				$line_item['total_discount'] = (string)($item['subtotal'] - $item['total']);
-      	$order_data['line_items'][] = $line_item;
-   	 	}
+      if (empty($customer_id)) { // guest
+        $order_data['user']['first_name'] = $order->get_billing_first_name();
+        $order_data['user']['last_name'] = $order->get_billing_last_name();
+        $order_data['user']['email'] = $order->get_billing_email();
+      }
+      else { // existing customer
+        $order_data['user']['first_name'] = $customer->get_first_name();
+        $order_data['user']['last_name'] = $customer->get_last_name();
+        $order_data['user']['email'] = $customer->get_email();
+      }
+      $order_data['id'] = (int) $order->get_order_number();
+      $order_data['currency'] = $order->get_currency();
+      $order_data['line_items'] = [];
+      foreach ($order->get_items() as $item) {
+        $line_item = array();
+        $line_item['variant_id'] = ($item['variation_id'] == 0)? $item['product_id']: $item['variation_id'];
+        $line_item['quantity'] = $item['quantity'];
+        $line_item['price'] = (string)($item['subtotal'] / $item['quantity']);
+        $line_item['item_id'] = $item['product_id'];
+        $line_item['total_discount'] = (string)($item['subtotal'] - $item['total']);
+        $order_data['line_items'][] = $line_item;
+      }
   ?>
-	<script>
-		var actionData = <?php echo json_encode($order_data);?>;
-		mt('slug', '<?php echo $slug; ?>');
-		mt('action', actionData);
-	</script>
+  <script>
+    var actionData = <?php echo json_encode($order_data);?>;
+    mt('slug', '<?php echo $slug; ?>');
+    mt('action', actionData);
+  </script>
   <?php }}?>
-    ```
+  ```
 
 ### Embed your Metisa recommendations
 
