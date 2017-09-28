@@ -153,4 +153,4 @@ If your code is embedded correctly, save the changes and you should see your rec
 
 > **IMPORTANT**: If you had just installed the code from the [Install](#install) section, your recommendations may not be ready yet, in which case you will see an empty widget with no products.
 
-> In this situation, we recommend you to check back again in a few days (the more traffic your store receives, the shorter the wait) before trying to embed recommendations on your site.
+> In this situation, we recommend you to check back again in a few hours (the more traffic your store receives, the shorter the wait) before trying to embed recommendations on your site.
