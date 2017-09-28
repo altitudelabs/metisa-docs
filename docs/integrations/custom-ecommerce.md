@@ -27,9 +27,9 @@ On the last point, if you are a developer, you may be able integrate with Metisa
 
 Recommendations are made based on machine learning algorithms that feed on your store data like products, orders, and customers.
 
-We need a way for your store to automatically send such data to Metisa, so that over time (3-7 days depending on site traffic), Metisa will learn enough about your customers' individual preferences to start providing good recommendations that get more accurate with time.
+We therefore need a way for your store to automatically send such data to Metisa, so that over time (3-7 days depending on site traffic), Metisa will learn enough about your customers' individual preferences to start providing good recommendations that get more accurate with time.
 
-The way to achieve this is through inserting some JavaScript code into the templates of your e-commerce store.
+The way to achieve this is through inserting some JavaScript code into the page templates of your e-commerce store.
 
 
 ### <a id="install"></a> Install
