@@ -8,6 +8,7 @@
   * [BigCommerce](integrations/bigcommerce.md)
   * [WooCommerce](integrations/woocommerce.md)
   * [Custom E-Commerce](integrations/custom-ecommerce.md)
+  * [Custom Media App](integrations/custom-media-app.md)
 * [Insights](insights.md)
   * [Overview](insights.md#overview)
   * [Customer lifetime value (CLV)](insights.md#customer-lifetime-value)
