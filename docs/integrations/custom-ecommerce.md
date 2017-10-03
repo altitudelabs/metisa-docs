@@ -58,7 +58,7 @@ crossorigin="anonymous"></script>
 Once jQuery is available, paste the following script to the same file below jQuery. This will load the Metisa script that is needed to send and receive data to/from Metisa.
 
 ```html
-<script src="https://metisa-sdk.s3-ap-southeast-1.amazonaws.com/js/v0.0/browser.js"></script>
+<script src="https://s3-ap-southeast-1.amazonaws.com/metisa-sdk/js/v0.0/metisa.js"></script>
 ```
 
 ##### <a id="embed-template-code"></a> Step 2: Embed template-specific code snippets

@@ -50,10 +50,10 @@ You can easily install Metisa plugin by embedding code snippets into the base te
     // define your team slug
     <?php $slug = '{% raw %}{{ metisa_account_slug }}{% endraw %}';?>
     // loads metisa script
-    var browser = document.createElement("script");
-    browser.src = "{{book.srcBaseUrl}}/js/v0.0/browser.js";
-    document.head.appendChild(browser);
-    browser.onload = function() {
+    var metisa = document.createElement("script");
+    metisa.src = "{{book.srcBaseUrl}}/js/v0.0/metisa.js";
+    document.head.appendChild(metisa);
+    metisa.onload = function() {
       var mt = document.createElement("script");
       mt.innerHTML = "mt('slug','<?php echo $slug?>');";
       <?php if(is_product()) { // product template
