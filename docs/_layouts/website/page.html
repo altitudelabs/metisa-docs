@@ -1,6 +1,6 @@
 {% extends "./layout.html" %}
 
-{% block title %}{{ page.title }} - {{ super() }}{% endblock %}
+{% block title %}{% if page.meta_title %}{{ page.meta_title }} - {{ super() }}{% else %}{{ page.title }} - {{ super() }}{% endif %}{% endblock %}
 
 {% block description %}{{ page.description }}{% endblock %}
 

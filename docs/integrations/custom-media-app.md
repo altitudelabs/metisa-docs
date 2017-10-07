@@ -1,3 +1,8 @@
+---
+meta_title: Personalization for Media Apps
+description: How to install Metisa for media apps for recommendation widgets, personalized emails and predictive customer analytics
+---
+
 # Custom Integration: Media App
 
 Want to use Metisa's recommendation engine for your app that isn't quite an e-commerce store? Use this article to integrate your web app to take full advantage of Metisa, and gain access to personalized item Recommendations for all your users, predictive analytics Insight Reports, emails and more.

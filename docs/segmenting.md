@@ -1,3 +1,8 @@
+---
+meta_title: Customer Segmentation
+description: How to find valuable customer segments and personas with Metisa for your marketing and customer acquisition campaigns
+---
+
 # Segmenting
 
 ### Overview

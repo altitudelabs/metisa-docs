@@ -1,6 +1,6 @@
 ---
-title: Getting Started
-description: Getting started with Metisa.
+meta_title: Getting Started
+description: The guide to getting installing Metisa's recommendation widgets, personalized emails and predictive customer analytics
 ---
 
 # Getting started

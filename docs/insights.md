@@ -1,3 +1,8 @@
+---
+meta_title: Predictive Customer Analytics
+description: Predictive customer lifetime value, predictive churn rate, predictive buyer personas and product recommendations for ecommerce, media and consumer apps.
+---
+
 # Insights
 
 ### Overview

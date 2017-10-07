@@ -1,3 +1,8 @@
+---
+meta_title: Personalization for WooCommerce
+description: How to install Metisa for WooCommerce for recommendation widgets, personalized emails and predictive customer analytics
+---
+
 # WooCommerce Integration
 
 This integration takes **5 minutes** to complete.
