@@ -1,3 +1,8 @@
+---
+meta_title: Personalization for Magento
+description: How to install Metisa for Magento for recommendation widgets, personalized emails and predictive customer analytics
+---
+
 # Magento Integration
 
 This integration takes **5 minutes** to complete.
@@ -5,7 +10,7 @@ This integration takes **5 minutes** to complete.
 ### Create Magento role
 
 1.  In your Magento admin panel select the **System** tab and mouse-over **Web Services** and select **SOAP/XML-RPC-Roles**.
-2.  When your page reloads, cpck **Add New Role**.
+2.  When your page reloads, click **Add New Role**.
 3.  Create a role with name **Metisa** and specify this user has access to all resources.
 4.  Select **Role Resources** on the left and side. Set the resource access to all and then click **Save Role**.
 ![](/images/magento/magento-2.png)
@@ -26,7 +31,6 @@ This integration takes **5 minutes** to complete.
 Add your Magento store in Metisa by providing the following fields:
 
 *   **Shop URL**: URL of your Magento store
-*   **Port number**: This should be 80 in most cases. If your store is hosted on a specific port number, specify that port number.
 *   **Username**: From **Create Magento User** step above
 *   **API key**: From **Create Magento User** step above
 

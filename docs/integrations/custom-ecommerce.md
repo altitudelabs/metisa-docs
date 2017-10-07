@@ -1,3 +1,8 @@
+---
+meta_title: Personalization for Ecommerce
+description: How to install Metisa for custom ecommerce sites for recommendation widgets, personalized emails and predictive customer analytics
+---
+
 # Custom Integration: E-Commerce
 
 Want to use Metisa even though your app is not built with any of the plugin-supported platforms? Use this article to set up your site to take full advantage of Metisa's recommendation engine for store.

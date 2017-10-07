@@ -1,3 +1,8 @@
+---
+meta_title: Personalization for BigCommerce
+description: How to install Metisa for BigCommerce for recommendation widgets, personalized emails and predictive customer analytics
+---
+
 # BigCommerce Integration
 
 This integration takes **1 minute** to complete.

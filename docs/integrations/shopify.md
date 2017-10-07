@@ -1,3 +1,8 @@
+---
+meta_title: Personalization for Shopify
+description: How to install Metisa for Shopify for recommendation widgets, personalized emails and predictive customer analytics
+---
+
 # Shopify Integration
 
 This integration takes **1 minute** to complete.
