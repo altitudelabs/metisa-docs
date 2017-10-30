@@ -20,9 +20,9 @@ This integration takes **5 minutes** to complete.
 1.  Create a new user to assign this role to. The **SOAP/XML-RPC - Users** item is above the **SOAP/XML-RPC - Roles** item in the **System** menu of the admin panel.
 ![](/images/magento/magento-3.png)
 
-3.  Click **Add New User** and then fill in the user information. The fields can have any values you like. We recommend setting the User Name, First Name, and Last Name to Metisa and the email address to support@askmetisa.com. The API key you specify is equivalent to a password, so make sure it's secure.
-4.  Once you've filled out the User Info section, click the **User Role** tab select the Metisa role you created earlier.
-![](/images/magento/magento-4.png)
+3.  Click **Add New User** and then fill in the user information. The fields can have any values you like. We recommend setting the User Name, First Name, and Last Name to Metisa and the email address to support@askmetisa.com.
+4.  Once you've filled out the User Info section, click the **User Role** tab select the Metisa role you created earlier. Note that you're supposed to generate your own API key. It's like a password, so make sure it's secure.
+![](/images/magento/magento-4.png) 
 
 6.  When you have finished, click back to User Info and Save User. In doing so, a SOAP user is created to sync Magento order and customer data into Metisa.
 
@@ -40,7 +40,7 @@ Add your Magento store in Metisa by providing the following fields:
 
 Install our Magento extension that is designed to be used alongside your Metisa account. It installs a Javascript snippet to allow you to install on-site recommendation widgets on your Magento site from your Metisa account. It also installs a cookie that tracks customer behavior on your site so that recommendations can adapt as customers shop on your site.
 
-Download our Magento extension [here](https://s3-ap-southeast-1.amazonaws.com/metisa/magento/metisa-magento-1.02.tgz).
+Download our Magento extension [here](https://s3-ap-southeast-1.amazonaws.com/metisa/magento/Metisa_Tracking-1.0.2.tgz).
 
 Links to installation instructions for [Magento 1.x](https://www.cminds.com/down-to-the-basics-how-to-install-a-magento-extension) and [Magento 2.x](http://docs.magento.com/marketplace/user_guide/quick-tour/install-extension.html).
 
