@@ -34,5 +34,12 @@ You will continue to have access to:
 
 The Free plan was designed to help you feel comfortable with using Metisa and to let you evaluate its effectiveness. If you have derived value in Metisa, we hope you will consider [upgrading][1]!
 
+### Q: I'm a Magento / BigCommerce user. What happened to my account and integration with Metisa?
+
+Starting 6 Nov 2017, we no longer support Magento and BigCommerce integrations to Metisa.
+
+Building only for a single platform frees us up from having to maintain multiple implementations of new features as well as having to keep up with the demands of the various platforms. We decided to do this so that our small team can focus on giving the majority of our users, who happen to be on Shopify, the best possible user experience and support.
+
+If you are a Magento or BigCommerce user, this means that your Metisa dashboard and widgets will no longer be updated, and other features will stop working (you would have received an email from us). Please drop us an email if you need help - we feel responsible for helping you move on from here. Thank you for using Metisa.
 
 [1]: /pricing
