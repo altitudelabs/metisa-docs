@@ -4,9 +4,9 @@
 * [Getting started](getting_started.md)
 * [Install integrations](integrations.md)
   * [Shopify](integrations/shopify.md)
-  * [Magento](integrations/magento.md)
-  * [BigCommerce](integrations/bigcommerce.md)
-  * [WooCommerce](integrations/woocommerce.md)
+  <!-- * [Magento](integrations/magento.md) -->
+  <!-- * [BigCommerce](integrations/bigcommerce.md) -->
+  <!-- * [WooCommerce](integrations/woocommerce.md) -->
   * [Custom E-Commerce](integrations/custom-ecommerce.md)
   * [Custom Media App](integrations/custom-media-app.md)
 * [Insights](insights.md)

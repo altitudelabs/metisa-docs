@@ -1,15 +1,13 @@
 # Install integrations
 
-Metisa analyzes your customers' purchases and behavior and lets you act on insights by email, SMS and web widgets.
-
-Metisa analyzes your store/app data and automatically generates item recommendations using machine learning. You will also have access to detailed insight reports, automated emails and recommendation widgets, all for free.
+Metisa analyzes your store/app data and automatically generates item recommendations using machine learning. You will also have access to detailed insight reports, automated emails, and recommendation widgets to improve your sales, all for free.
 
 It takes as little as a few minutes to integrate your store with Metisa.
 
 * [Shopify](integrations/shopify.md)
-* [Magento](integrations/magento.md)
-* [BigCommerce](integrations/bigcommerce.md)
-* [WooCommerce](integrations/woocommerce.md)
+<!-- * [Magento](integrations/magento.md) -->
+<!-- * [BigCommerce](integrations/bigcommerce.md) -->
+<!-- * [WooCommerce](integrations/woocommerce.md) -->
 
 If you have a store not built on any of the above plugin-supported platforms, or you have a different kind of app, please use these other guides to setup your integration.
 
