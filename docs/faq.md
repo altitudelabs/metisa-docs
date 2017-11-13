@@ -43,3 +43,11 @@ Building only for a single platform frees us up from having to maintain multiple
 If you are a Magento or BigCommerce user, this means that your Metisa dashboard and widgets will no longer be updated, and other features will stop working (you would have received an email from us). Please drop us an email if you need help - we feel responsible for helping you move on from here. Thank you for using Metisa.
 
 [1]: /pricing
+
+### Q: Why is this installation process of other widgets different from Magic Widget?
+
+The Magic Widget is different from all the other widgets in terms of its behaviour. Because it hovers at the bottom of the page on any page of your store, Metisa can automatically insert the code into one of your template files on Shopify without worrying about _where_ exactly on the page to insert the code at.
+
+The other widgets, on the other hand, are part of the page’s flow. That means that if Metisa automatically inserts these widget code snippets into a template of your shop, there is a high chance that it will not be inserted at the place (on the page) that you would want it to appear. In order to give you better control to determine where exactly you want these widgets to appear, we opted to not insert code directly for these widgets and let you copy and paste the code to the right place instead.
+
+Once you have inserted the widget code snippet into your store and hit “Save,” refresh the page that you inserted the code into and you should see the widget loaded on your page!
