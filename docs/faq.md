@@ -44,7 +44,7 @@ If you are a Magento or BigCommerce user, this means that your Metisa dashboard 
 
 [1]: /pricing
 
-### Q: Why is this installation process of other widgets different from Magic Widget?
+### Q: Why is the installation process of other widgets different from Magic Widget?
 
 The Magic Widget is different from all the other widgets in terms of its behaviour. Because it hovers at the bottom of the page on any page of your store, Metisa can automatically insert the code into one of your template files on Shopify without worrying about _where_ exactly on the page to insert the code at.
 
