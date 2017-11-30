@@ -42,7 +42,7 @@ Building only for a single platform frees us up from having to maintain multiple
 
 If you are a Magento or BigCommerce user, this means that your Metisa dashboard and widgets will no longer be updated, and other features will stop working (you would have received an email from us). Please drop us an email if you need help - we feel responsible for helping you move on from here. Thank you for using Metisa.
 
-[1]: /pricing
+[1]: https://askmetisa.com/pricing
 
 ### Q: Why is the installation process of other widgets different from Magic Widget?
 
