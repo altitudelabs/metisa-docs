@@ -170,6 +170,11 @@ Fields form part of an expression. You can filter on the following fields. Note 
             <td>total_purchase</td>
             <td>Total dollar value of purchases from a customer to date.</td>
         </tr>
+        <tr>
+            <td>Categories (<strong>Only available for particular stores</strong>)</td>
+            <td>tag_categories</td>
+            <td>The set of categories for all the products the customer has traded.</td>
+        </tr>
     </tbody>
 </table>
 
