@@ -36,4 +36,7 @@
   * [Getting started](widgets.md#getting-started)
   * [Creating a widget](widgets.md#creating-a-widget)
   * [Installing a widget](widgets.md#installing-a-widget)
+* [Blacklist](blacklist.md)
+  * [Overview](blacklist.md#overview)
+  * [Blacklist or whitelist a product](blacklist.md#blacklist-or-whitelist-a-product)
 * [Frequently Asked Questions](faq.md)
