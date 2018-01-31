@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/proximanova-regular-webfont.eot');
+  src: url('../fonts/proximanova-regular-webfont.woff') format('woff'),
+       url('../fonts/proximanova-regular-webfont.ttf') format('truetype'),
+       url('../fonts/proximanova-regular-webfont#ProximaNovaBlRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/proximanova-semibold-webfont.eot');
+  src: url('../fonts/proximanova-semibold-webfont.woff') format('woff'),
+       url('../fonts/proximanova-semibold-webfont.ttf') format('truetype'),
+       url('../fonts/proximanova-semibold-webfont#proxima_nova_ltbold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/proximanova-light-webfont.eot');
+  src: url('../fonts/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/proximanova-light-webfont.woff') format('woff'),
+       url('../fonts/proximanova-light-webfont.ttf') format('truetype'),
+       url('../fonts/proximanova-light-webfont.svg#proxima_nova_ltregular') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+    letter-spacing: .1px;
+}
+
+.book.font-family-1 {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 15px;
+}
+
+.book.font-size-1 .book-body .page-inner section {
+    font-size: 15px;
+}
+
+.brand img {
+    width: 240px;
+    padding-left: 2px;
+}
+
+.book-summary ul.summary li a, .book-summary ul.summary li span {
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+.book-summary ul.summary {
+    margin-bottom: 20px;
+}
+
+.book-summary ul.summary li.active > a {
+    color: #38CEA3;
+}
+
+.book-summary ul.summary li {
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.book-summary ul.summary > li.chapter > ul.articles {
+    padding-left: 5px;
+    display: none;
+}
+
+.book-summary ul.summary > li.chapter > ul.articles > li > a {
+    color: #A0A0A0;
+    font-size: 14px;
+}
+
+.book-summary ul.summary > li.chapter > ul.articles > li.active > a {
+    color: #38CEA3;
+}
+
+.markdown-section .topic {
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+.markdown-section .topic h4 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.markdown-section .topic a {
+    display: block;
+    padding: 15px 10px 15px 0px;
+    color: black;
+}
+
+.markdown-section .topic a:hover,
+.markdown-section .topic a:focus,
+.markdown-section .topic a:visited {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .markdown-section .topic {
+        width: 100%;
+        float: none;
+    }
+}
+
+.font-settings {
+  display: none;
+}
+
+.page-inner img {
+  margin-top: 20px;
+}
